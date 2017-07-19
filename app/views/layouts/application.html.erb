@@ -34,7 +34,22 @@
     <br class="clear" />
       
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="containter">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to "How else can I tell?", "#", class: 'next-quote' %>
+          </div>
+          <div class="col-6">
+            Hacked in SF by Brita Ulf
+          </div>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
