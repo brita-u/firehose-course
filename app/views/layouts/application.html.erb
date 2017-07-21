@@ -11,20 +11,22 @@
   <body>
     <header class ="row">
       <div class ="col-3">
-        <div class="circle">
-          <br />
-          You're
-          <br />
-          From
-          <br />
-          SF When...
-        </div>
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+           <br />
+           You're
+           <br />
+           From
+           <br />
+           SF When...
+           </div>
+        <% end %>
       </div>
       <div class="col-4 slogan">
         Revealing telltale signs of San Franciscans since 2017.
       </div>
       <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Contribute', new_quote_path %>
         <%= link_to 'About', '#' %>
       </div>
     </header>
@@ -42,7 +44,7 @@
       <div class="containter">
         <div class="row">
           <div class="col-6">
-            <%= link_to "How else can I tell?", "#", class: 'next-quote' %>
+            <%= link_to "How else can I tell?", root_path, class: 'next-quote' %>
           </div>
           <div class="col-6 footer-blurb">
             Hacked in SF by Brita Ulf
