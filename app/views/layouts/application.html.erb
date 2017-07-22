@@ -22,13 +22,13 @@
            </div>
         <% end %>
       </div>
-      <div class="col-4 slogan">
+      <div class="col col-sm-4 hidden-xs-down slogan">
         Revealing telltale signs of San Franciscans since 2017.
       </div>
-      <div class="col-5 links">
+      <div class=" col-t0 offset-1 offset-sm-0 col-sm-5 links">
         <!-- Button trigger modal -->
     <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
-    </button>
+    &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
       </div>
     </header>
@@ -46,8 +46,9 @@
           </div>
           <%= simple_form_for Quote.new do |f| %>
             <div class="modal-body">
-              <%= f.input :saying %>
-              <%= f.input :author %>
+              <%= f.input :saying, label: "What is your SF experience?", placeholder: "You're 30 and still have 4 roommates" %>
+              <br />
+              <%= f.input :author, label: "What's your name?", placeholder: "half of SF population" %>
             </div>
           
           <div class="modal-footer">
@@ -76,10 +77,10 @@
     <div class="footer">
       <div class="containter">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
             <%= link_to "How else can I tell?", root_path, class: 'next-quote' %>
           </div>
-          <div class="col-6 footer-blurb">
+          <div class="col-12 col-sm-6 footer-blurb">
             Hacked in SF by Brita Ulf
           </div>
         </div>
